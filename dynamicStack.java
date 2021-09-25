@@ -12,19 +12,18 @@ public class dynamicStack extends customStack {
 	}
 
 	@Override
-	public void push(int val) {
+	public void push(int val) throws StackOverflowException {
 		int top = getTop();
 		int cap = getCap();
 		if (top == cap - 1) {
 			int[] newData = new int[2 * cap];
 			for (int i = 0; i < cap; i++) {
-				newData[i] = getData(i);
+				newData[i] = data[i];
 			}
 			setData(newData);
 
 		}
-		setTop(top + 1);
-		setData(getTop(), val);
+		super.push(val);
 	}
 
 }
