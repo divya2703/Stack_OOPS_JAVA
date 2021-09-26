@@ -6,50 +6,49 @@ public class customStack implements IStack {
 	protected int cap; // capacity of stack, can be provided at runtime else defaults to 10
 	private static final int DEFAULT_CAPACITY = 10;
 
-	public customStack(int cap) {
+	protected customStack(int cap) {
 		this.data = new int[cap];
 		this.top = -1;
 		this.cap = cap;
 	}
 
-	public customStack() {
-		this.cap = DEFAULT_CAPACITY;
-		this.data = new int[cap];
-		this.top = -1;
+	protected customStack() {
+		this(DEFAULT_CAPACITY);
 
 	}
 
-	public int[] getData() {
+	protected int[] getData() {
 		return data;
 	}
 
-	public int getData(int index) {
+	protected int getData(int index) {
 		return data[index];
 	}
 
-	public void setData(int[] data) {
+	protected void setData(int[] data) {
 		this.data = data;
 		this.cap = data.length;
 	}
 
-	public void setData(int index, int val) {
+	protected void setData(int index, int val) {
 		data[index] = val;
 	}
 
-	public int getTop() {
+	protected int getTop() {
 		return top;
 	}
 
-	public void setTop(int top) {
+	protected void setTop(int top) {
 		this.top = top;
 	}
 
+
+	protected int getCap() {
+		return cap;
+	}
+	
 	private int getSize() {
 		return top + 1;
-	}
-
-	public int getCap() {
-		return cap;
 	}
 
 	public int size() {
