@@ -4,7 +4,7 @@ public class Client {
 
 	public static void main(String[] args) throws StackOverflowException, StackUnderflowException {
 		
-		IStack normalStack = new customStack(3);
+		IStack normalStack = new CustomStack(3);
 		
 		normalStack.push(10);
 		normalStack.push(20);
@@ -27,7 +27,7 @@ public class Client {
 		//System.out.println(normalStack.pop()); 
 		// Uncomment Line 26 to see StackUnderflow because size=0 when we're trying to pop
 	
-		IStack dStack = new dynamicStack(3); //dStack denotes dynamic stack
+		IStack dStack = new DynamicStack(3); //dStack denotes dynamic stack
 		dStack.push(10);
 		dStack.push(20);
 		dStack.push(30);

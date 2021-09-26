@@ -1,18 +1,18 @@
 package stack;
 
-public class customStack implements IStack {
+public class CustomStack implements IStack {
 	protected int[] data;
 	protected int top; // index of top element
 	protected int cap; // capacity of stack, can be provided at runtime else defaults to 10
 	private static final int DEFAULT_CAPACITY = 10;
 
-	protected customStack(int cap) {
+	protected CustomStack(int cap) {
 		this.data = new int[cap];
 		this.top = -1;
 		this.cap = cap;
 	}
 
-	protected customStack() {
+	protected CustomStack() {
 		this(DEFAULT_CAPACITY);
 
 	}

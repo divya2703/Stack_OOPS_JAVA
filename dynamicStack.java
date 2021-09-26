@@ -1,13 +1,13 @@
 package stack;
 
-public class dynamicStack extends customStack {
+public class DynamicStack extends CustomStack {
 	private static final int DEFAULT_CAPACITY = 10;
 
-	public dynamicStack() {
+	public DynamicStack() {
 		super(DEFAULT_CAPACITY);
 	}
 
-	public dynamicStack(int cap) {
+	public DynamicStack(int cap) {
 		super(cap);
 	}
 
